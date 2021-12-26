@@ -25,4 +25,5 @@ namespace WpfApp1
             InitializeComponent();
         }
     }
+    // коммент
 }
