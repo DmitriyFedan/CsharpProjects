@@ -23,6 +23,21 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+            Clock clock = new Clock();
+            UpdateDateTime(clock);
+        }
+
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // привязка тут
+        }
+
+        private void UpdateDateTime(Clock clock)
+        {
+
+            hour.Content = clock.hour;
+
         }
     }
     // коммент
