@@ -9,22 +9,22 @@ namespace WpfApp1
 {
     public class Clock
     {
-        public DateTime dateTime 
+        public DateTime DateTime 
         {
             get { return DateTime.Now; }
             private set { } //  Convert.ToString(dateTime.Now);
         }
-        public string hour
+        public string Hour
         {
-            get { return Convert.ToString( dateTime.Hour); }
+            get { return Convert.ToString( DateTime.Hour); }
         }
-        public string minute
-        { get { return Convert.ToString(dateTime.Minute); } }
-        public string seconds
-        { get { return Convert.ToString(dateTime.Second); } }
+        public string Minute
+        { get { return Convert.ToString(DateTime.Minute); } }
+        public string Seconds
+        { get { return Convert.ToString(DateTime.Second); } }
         public Clock()
         {
-            dateTime = DateTime.Now;
+            DateTime = DateTime.Now;
         }
     }
 }
