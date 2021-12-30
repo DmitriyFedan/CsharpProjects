@@ -13,10 +13,10 @@
         </Grid.ColumnDefinitions>
         <Button Content="Кнопка&#xA;" HorizontalAlignment="Center" Margin="0,83,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.49,0.513" Width="140" Height="25" Click="Button_Click"/>
         <Label x:Name="hour" Content="h" HorizontalAlignment="Left" Margin="16,32,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="68,32,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
-        <Label Content="Label" HorizontalAlignment="Left" Height="30" Margin="119,32,0,0" VerticalAlignment="Top" Width="70"/>
+        <Label Content="min" HorizontalAlignment="Left" Margin="68,32,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
+        <Label Content="sec" HorizontalAlignment="Left" Height="30" Margin="119,32,0,0" VerticalAlignment="Top" Width="70"/>
         <Label Content="Сегодня:" HorizontalAlignment="Left" Margin="16,6,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
-        <Label Content="Label" HorizontalAlignment="Left" Height="27" Margin="99,6,0,0" VerticalAlignment="Top" Width="57"/>
+        <Label Content="datetime" HorizontalAlignment="Left" Height="27" Margin="99,6,0,0" VerticalAlignment="Top" Width="57"/>
 
     </Grid>
 </Window>
