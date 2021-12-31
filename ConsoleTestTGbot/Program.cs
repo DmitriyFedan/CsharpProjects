@@ -29,6 +29,8 @@ using var cts = new CancellationTokenSource();
 
 // StartReceiving does not block the caller thread. Receiving is done on the ThreadPool.
 
+
+
 Bot.StartReceiving(
     HandleUpdateAsync,
     HandleErrorAsync,
@@ -50,6 +52,22 @@ async Task HandleUpdateAsync(ITelegramBotClient Bot, Update update, Cancellation
     // Only process text messages
     if (update.Message!.Type != MessageType.Text)
         return;
+    if (update.Message.)
+
+    switch (update.Message.Text)
+    {
+        case "Привет":
+            {
+                GoNext(Bot,update.Message.Chat.Id);
+                break;
+            }
+        case "Как дела":
+            GoNext(Bot, update.Message.Chat.Id);
+            Console.WriteLine("1");
+            break;
+    }
+    if (update.Message.Text == "Клавиатура")
+        GoNext(Bot,update.Message.Chat.Id);
     
     
 
@@ -78,6 +96,23 @@ Task HandleErrorAsync(ITelegramBotClient Bot, Exception exception, CancellationT
     return Task.CompletedTask;
 }
 
+async void GoNext(ITelegramBotClient Bot, ChatId chatId)
+{
+    ReplyKeyboardMarkup replyKeyboardMarkup = new(new[]
+    {
+    new KeyboardButton[] { "One", "Two" },
+    new KeyboardButton[] { "Three", "Four" },
+    })
+    {
+        ResizeKeyboard = true
+    };
+    Message sentMessage = await Bot.SendTextMessageAsync(
+        chatId: chatId,
+        text: "Choose a response",
+        replyMarkup: replyKeyboardMarkup);
+        //cancellationToken: cancellationToken);
+}
+/*
 ReplyKeyboardMarkup replyKeyboardMarkup = new(new[]
 {
         new KeyboardButton[] { "One", "Two" },
