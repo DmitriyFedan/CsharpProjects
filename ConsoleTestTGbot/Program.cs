@@ -52,7 +52,8 @@ async Task HandleUpdateAsync(ITelegramBotClient Bot, Update update, Cancellation
     // Only process text messages
     if (update.Message!.Type != MessageType.Text)
         return;
-    if (update.Message.)
+    if (update.Message.Text == "/start")
+        //NewUser();
 
     switch (update.Message.Text)
     {
